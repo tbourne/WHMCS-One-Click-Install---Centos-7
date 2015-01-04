@@ -24,4 +24,11 @@ nano /etc/php.d/20ioncube.ini
 zend_extension = /usr/lib64/php/modules/ioncube_loader_lin_5.6.so
 
 
+#Rename the Nano File for the Ioncube Loader #messycode
+mv /etc/php.d/20ioncube.ini.save /etc/php.d/20ioncube.ini
+
+#Remove the webinstaller for ioncube as its no longer needed... Good Ridance 
+rm -rf /var/www/html/ioncube/ioncube/loader-wizard.php
+
+
  
