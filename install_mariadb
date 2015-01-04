@@ -1,4 +1,4 @@
-yum install mariadb-server mariadb
+yum install mariadb-server mariadb -y
 
 systemctl start mariadb
 
