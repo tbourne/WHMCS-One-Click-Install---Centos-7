@@ -1,13 +1,20 @@
 ##  This code portion will sort out the stupid ioncube install crap 
 ##  I despise ioncube.. I should send them angry hotdog pictures 
 
+## Downlaod and install the web interface installers 
+wget https://www.ioncube.com/loader-wizard/loader-wizard.zip
+unzip loader-wizard.zip #ever file needs a good unzip.. Just shut your eyes 
+rm -rf loader-wizard.zip #remove the loader wizard as we have already unziped it 
+mv ioncube/loader-wizard.php /var/www/html/ioncube
+rm -rf ioncube
+
 ##   Download the loaders 
 wget http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
-tar -xvf ioncube_loaders_lin_x86-64.tar.gz
+tar -xvf ioncube*
 
 
 ##   Move the relevant loader into the right place
-mv ioncube_loader_lin_5.6.so /usr/lib64/php/modules
+mv ioncube/ioncube_loader_lin_5.6.so /usr/lib64/php/modules
 rm -rf ioncube 
 rm -rf  ioncube_loaders_lin_x86-64.tar.gz
 
