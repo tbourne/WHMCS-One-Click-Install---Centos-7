@@ -1,7 +1,14 @@
+#Install and then start the Mariadb Service 
 yum install mariadb-server mariadb -y
-
 systemctl start mariadb
 
-curl -sSL https://raw.githubusercontent.com/jakubjedelsky/mysql_secure_installation/master/mysql_secure_installation | bash
-
+#Start Service on Server Reboot
 systemctl enable mariadb.service
+
+## Secure MySQL/mariaDB Installation
+curl -sSL https://raw.githubusercontent.com/danijeljames/PCI-CS-Nginx/master/apache-setup/mysql_secure.sh | bash
+
+
+# Configure databases
+curl -sSL https://github.com/danijeljames/PCI-CS-Nginx/raw/master/apache-setup/createdb.sh | bash -s "$sqldbnom" "$sqldbuser" "$sqldbpass"
+
