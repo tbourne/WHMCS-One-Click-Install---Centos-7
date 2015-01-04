@@ -13,3 +13,8 @@ yum -y install iptables-services
 ## Install iptables 
 systemctl enable iptables #make sure iptables start on load 
 systemctl start iptables #start iptables 
+
+##Flush the iptables with toilet duck 
+# If you dont get the refearnce go to http://www.scjohnson.com.au/products/duck/ #trentneedssleep
+iptables -F
+iptables -L
