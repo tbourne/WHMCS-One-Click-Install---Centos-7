@@ -18,7 +18,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 yum --enablerepo=remi,remi-php56 install httpd php php-common -y
 
 ## Install the PHP Modules available
-yum --enablerepo=remi,remi-php56 install php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongo php-sqlite php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml -y
+yum --enablerepo=remi,remi-php56 install php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongo php-sqlite php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml php-gd php-soap -y
 
 ## Start the Server - Every good service needs a boot up 
 systemctl enable httpd.service
