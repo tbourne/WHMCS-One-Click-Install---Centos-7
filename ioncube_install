@@ -3,8 +3,9 @@
 
 ##   Download the loaders 
 wget http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
-tar -xvfz ioncube_loaders_lin_x86-64.tar.gz
-rm ioncube_loaders_lin_x86-64.tar.gz -y
+tar -xvf ioncube_loaders_lin_x86-64.tar.gz
+rm ioncube_loaders_lin_x86-64.tar.gz
+
 
 ##   Move the relevant loader into the right place
 cp /var/www/html/ioncube/ioncube_loader_lin_5.6.so /usr/lib64/php/modules
