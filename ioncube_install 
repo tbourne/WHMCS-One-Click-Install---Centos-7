@@ -1,0 +1,16 @@
+##  This code portion will sort out the stupid ioncube install crap 
+##  I despise ioncube.. I should send them angry hotdog pictures 
+
+##   Download the loaders 
+wget http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
+tar -xvfz ioncube_loaders_lin_x86-64.tar.gz
+
+##   Move the relevant loader into the right place
+cp /var/www/html/ioncube/ioncube_loader_lin_5.6.so /usr/lib64/php/modules
+
+
+
+
+
+
+ 
