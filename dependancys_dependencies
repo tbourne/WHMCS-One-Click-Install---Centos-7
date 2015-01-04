@@ -22,3 +22,9 @@ yum --enablerepo=remi,remi-php56 install php-pecl-apcu php-cli php-pear php-pdo 
 
 ## Start the Server - Every good service needs a boot up 
 systemctl enable httpd.service
+
+#Check what version of PHP is installed 
+php -v
+
+
+
