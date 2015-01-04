@@ -3,3 +3,4 @@
 curl -sSL https://raw.githubusercontent.com/tbourne/WHMCS-One-Click-Install---Centos-7/master/install_dependencies | bash 
 curl -sSL https://raw.githubusercontent.com/tbourne/WHMCS-One-Click-Install---Centos-7/master/remove_firewalld | bash 
 curl -sSL https://raw.githubusercontent.com/tbourne/WHMCS-One-Click-Install---Centos-7/master/installwebmin | bash 
+curl -sSL https://raw.githubusercontent.com/tbourne/WHMCS-One-Click-Install---Centos-7/master/ioncube_install | bash
