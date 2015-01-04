@@ -6,15 +6,19 @@
 ## Change to root user if your not already the root user 
 sudo -i
 
-## Just incase yoru stupid and have not already updated your system - If this is you.. You make me sad 
+## Just incase your stupid and have not already updated your system - If this is you.. You make me sad 
 yum update -y
+
+##Just installing the important stuff that would not work if you have been given a crap copy of CentOS
+yum install git nano wget curl gcc gcc-c++ openssl-devel -y 
+
 
 ## Install the CentOS Dependencys from RHEL - This is because CentOS are slack and cant update their own packages in a timley manner 
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 
 
-## Install PHP, Http and PHP Commmon Files... All basic stuff, nothing exciting at all
+## Install PHP, Http and PHP Common Files... All basic stuff, nothing exciting at all
 yum --enablerepo=remi,remi-php56 install httpd php php-common -y
 
 ## Install the PHP Modules available
