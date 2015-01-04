@@ -11,7 +11,7 @@ sudo -i
 yum update -y
 
 ##Just installing the important stuff that would not work if you have been given a crap copy of CentOS
-yum install git nano wget curl gcc gcc-c++ openssl-devel -y 
+yum install git nano wget curl gcc gcc-c++ openssl-devel zip unzip -y 
 
 
 ## Install the CentOS Dependencys from RHEL - This is because CentOS are slack and cant update their own packages in a timley manner 
