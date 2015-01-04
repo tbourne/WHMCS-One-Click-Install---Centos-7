@@ -38,6 +38,7 @@ iptables -A INPUT -p tcp -m tcp --dport 143 -j ACCEPT #POP3 Ports (Unsecure)
 iptables -A INPUT -p tcp -m tcp --dport 993 -j ACCEPT #POP3 Ports (Secure)
 iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT #SSH Access in 
 iptables -A INPUT -p tcp -m tcp --dport 10000 -j ACCEPT #Webmin (More on this later) 
+iptables -A INPUT -p tcp -m tcp --dport 5282 -j ACCEPT #Postgres 
 
 #  Block everything else from sniffing around - Lets wrap your server in cotton wool# 
 iptables -P OUTPUT ACCEPT #Allow all outgoing transmitions... Lets face it if somone is in your server they can open the ports #stupid
