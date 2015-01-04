@@ -2,5 +2,17 @@
 ##  Webmin is the best thing since hotdogs
 ##  Yummmmm Hot dogs
 
+## Finally Lets Start the Install and get the keys and set up the RPM 
+wget http://www.webmin.com/jcameron-key.asc
+rpm --import jcameron-key.asc
+
+## Set up the repository so that Yum will update the install whenever its needed #Yay #lazy 
+
+touch /etc/yum.repos.d/webmin.repo
+echo "[Webmin]" >> /etc/yum.repos.d/webmin.repo
+echo "name=Webmin Distribution Neutral" >> /etc/yum.repos.d/webmin.repo
+echo "#baseurl=http://download.webmin.com/download/yum" >> /etc/yum.repos.d/webmin.repo
+echo "mirrorlist=http://download.webmin.com/download/yum/mirrorlist" >> /etc/yum.repos.d/webmin.repo
+echo "enabled=1" >> /etc/yum.repos.d/webmin.repo
 
  

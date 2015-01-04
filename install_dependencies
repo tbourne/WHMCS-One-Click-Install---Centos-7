@@ -6,14 +6,6 @@
 ## Change to root user if your not already the root user 
 sudo -i
 
-## Lets make Mr Danijel happy and change the terminal colours so it looks all silly #Wasteoftime #yournotahotdog 
-echo "" >> ~/.bash_profile
-echo "export CLICOLOR=1" >> ~/.bash_profile
-echo "export LSCOLORS=GxFxCxDxBxegedabagaced" >> ~/.bash_profile
-echo "export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bash_profile
-echo "" >> ~/.bash_profile
-source ~/.bash_profile
-echo “Trent loves Danijel sometimes“
  
 ## Just incase your stupid and have not already updated your system - If this is you.. You make me sad 
 yum update -y
