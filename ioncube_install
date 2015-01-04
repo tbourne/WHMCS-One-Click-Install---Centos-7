@@ -7,7 +7,7 @@ tar -xvf ioncube_loaders_lin_x86-64.tar.gz
 
 
 ##   Move the relevant loader into the right place
-mv /var/www/html/ioncube/ioncube_loader_lin_5.6.so /usr/lib64/php/modules
+mv ioncube_loader_lin_5.6.so /usr/lib64/php/modules
 rm -rf ioncube 
 rm -rf  ioncube_loaders_lin_x86-64.tar.gz
 
