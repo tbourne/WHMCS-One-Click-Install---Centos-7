@@ -6,7 +6,45 @@ systemctl start mariadb
 systemctl enable mariadb.service
 
 ## Secure MySQL/mariaDB Installation
-curl -sSL https://raw.githubusercontent.com/danijeljames/PCI-CS-Nginx/master/apache-setup/mysql_secure.sh | bash
+yum -y install expect
+
+# Not required in actual script
+MYSQL_ROOT_PASSWORD=HairyMonkey89!
+
+SECURE_MYSQL=$(expect -c "
+
+set timeout 10
+spawn mysql_secure_installation
+
+expect \"Enter current password for root (enter for none):\"
+send \"\r\"
+
+expect \"Set root password? [Y/n]\"
+send \"Y\r\"
+
+expect \"New password:\"
+send \"$MYSQL_ROOT_PASSWORD\r\"
+
+expect \"Re-enter new password:\"
+send \"$MYSQL_ROOT_PASSWORD\r\"
+
+expect \"Remove anonymous users? [Y/n]\"
+send \"Y\r\"
+
+expect \"Disallow root login remotely? [Y/n]\"
+send \"Y\r\"
+
+expect \"Remove test database and access to it? [Y/n]\"
+send \"Y\r\"
+
+expect \"Reload privilege tables now? [Y/n]\"
+send \"Y\r\"
+
+expect eof
+")
+
+echo "$SECURE_MYSQL"
+printf "\e[93mmariaDB Secured\e[0m\n" #(yellow)
 
 
 # Configure databases
