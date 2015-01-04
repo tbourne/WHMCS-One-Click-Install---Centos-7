@@ -15,4 +15,12 @@ echo "#baseurl=http://download.webmin.com/download/yum" >> /etc/yum.repos.d/webm
 echo "mirrorlist=http://download.webmin.com/download/yum/mirrorlist" >> /etc/yum.repos.d/webmin.repo
 echo "enabled=1" >> /etc/yum.repos.d/webmin.repo
 
+
+## Lets finally install Webmin - This can take about a minute to install
+## Just remember you need to have disabled the FirewallD on the server with the script names remove_firewalld unless I have a brain snap and change the file name again
+yum install webmin -y
+yum update -y #Just for good measure 
+
+
+
  
