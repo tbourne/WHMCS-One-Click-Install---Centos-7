@@ -19,6 +19,9 @@ rm -rf ioncube
 rm -rf  ioncube_loaders_lin_x86-64.tar.gz
 
 
+## Add the zen_extention into the server to activate the ioncube install 
+touch /etc/php.d/20ioncube.ini
+echo "zend_extension = /usr/lib64/php/modules/ioncube_loader_lin_5.6.so"
 
 
  
