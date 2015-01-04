@@ -6,6 +6,9 @@
 ## Change to root user if your not already the root user 
 sudo -i
 
+## Just incase yoru stupid and have not already updated your system - If this is you.. You make me sad 
+yum update -y
+
 ## Install the CentOS Dependencys from RHEL - This is because CentOS are slack and cant update their own packages in a timley manner 
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
