@@ -1,0 +1,15 @@
+##  This code portion will only disable and remove the FirewallD in Centos 7 
+##  Lets Face it FirewallD is horrid an everyone else likes using iptables anyways.. You can skip this step if you realy want to
+
+
+##  Disable and Stop the FirewallD service before anything else. 
+systemctl mask firewalld  #Disable 
+systemctl stop firewalld  #Stop 
+ 
+##  Install the iptables related  packages
+yum -y install iptables-services 
+#I sware that everytime I see Yum It makes me think of cookie monster... Nommm Nooo 
+
+## Install iptables 
+systemctl enable iptables #make sure iptables start on load 
+systemctl start iptables #start iptables 
