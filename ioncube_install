@@ -20,12 +20,8 @@ rm -rf  ioncube_loaders_lin_x86-64.tar.gz
 
 
 ## Add the zen_extention into the server to activate the ioncube install 
-nano /etc/php.d/20ioncube.ini
-zend_extension = /usr/lib64/php/modules/ioncube_loader_lin_5.6.so
-
-
-#Rename the Nano File for the Ioncube Loader #messycode
-mv /etc/php.d/20ioncube.ini.save /etc/php.d/20ioncube.ini
+touch /etc/php.d/20ioncube.ini
+echo "zend_extension = /usr/lib64/php/modules/ioncube_loader_lin_5.6.so" > /etc/php.d/20ioncube.ini
 
 #Remove the webinstaller for ioncube as its no longer needed... Good Ridance 
 rm -rf /var/www/html/ioncube/ioncube/loader-wizard.php
