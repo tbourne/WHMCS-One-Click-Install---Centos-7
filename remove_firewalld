@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ##  This code portion will only disable and remove the FirewallD in Centos 7 
 ##  Lets Face it FirewallD is horrid an everyone else likes using iptables anyways.. You can skip this step if you realy want to
 
