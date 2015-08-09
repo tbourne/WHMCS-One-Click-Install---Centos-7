@@ -43,6 +43,7 @@ iptables -A INPUT -p tcp -m tcp --dport 10000 -j ACCEPT #Webmin (More on this la
 iptables -A INPUT -p tcp -m tcp --dport 5282 -j ACCEPT #Postgres 
 iptables -A INPUT -p tcp -m tcp --dport 5432 -j ACCEPT #Postgres 
 iptables -A INPUT -p tcp -m tcp --dport 3306 -j ACCEPT #Postgres 
+iptables -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT #SHH Access  
 
 
 # Save, restart and Show the user again the iptables just for shits and giggles 
