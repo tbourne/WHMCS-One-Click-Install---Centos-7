@@ -27,6 +27,8 @@ iptables -L
 iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP  #Block null packets 
 iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP #Block syc-flood attack ports 
 iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP #XMAS Packets 
+iptables -A INPUT -p tcp -m tcp --dport 21 -j DROP #FTP Uplaod (Not Allowed IAW PCI)
+iptables -A INPUT -p tcp -m tcp --dport 22 -j DROP #FTP Uplaod (Not Allowed IAW PCI)
 
 # Allowing Ports In #
 iptables -A INPUT -i lo -j ACCEPT #Alowing Local Host.. Not normaly needed but just incase 
