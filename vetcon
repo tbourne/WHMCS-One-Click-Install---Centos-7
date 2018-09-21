@@ -1,0 +1,17 @@
+sudo -i
+php -f /home/ui3t0yuf/public_html/cron/email_traffic.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/renewal_reminder.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/daily_maintenance.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/report_rollup.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/statisticreport.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/sitemap.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/export_listings.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/export_events.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/export_mailapp.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/rollback_import.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php -f /home/ui3t0yuf/public_html/cron/rollback_import_events.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php /home/ui3t0yuf/edirectory/app/console edirectory:import --all-domains 1>&2 >> /home/ui3t0yuf/edirectory/app/logs/import.log
+php /home/ui3t0yuf/edirectory/app/console edirectory:sync -i --all-domains 1>&2 >> /home/ui3t0yuf/edirectory/app/logs/import-sync.log
+php -f /home/ui3t0yuf/public_html/cron/cron_manager.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
+php /home/ui3t0yuf/edirectory/app/console edirectory:import --all-domains 1>&2 >> /home/ui3t0yuf/edirectory/app/logs/import.log
+php /home/ui3t0yuf/edirectory/app/console edirectory:sync -i --all-domains 1>&2 >> /home/ui3t0yuf/edirectory/app/logs/import-sync.log
