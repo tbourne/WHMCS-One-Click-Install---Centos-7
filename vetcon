@@ -15,3 +15,4 @@ php /home/ui3t0yuf/edirectory/app/console edirectory:sync -i --all-domains 1>&2 
 php -f /home/ui3t0yuf/public_html/cron/cron_manager.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
 php /home/ui3t0yuf/edirectory/app/console edirectory:import --all-domains 1>&2 >> /home/ui3t0yuf/edirectory/app/logs/import.log
 php /home/ui3t0yuf/edirectory/app/console edirectory:sync -i --all-domains 1>&2 >> /home/ui3t0yuf/edirectory/app/logs/import-sync.log
+php /home/ui3t0yuf/edirectory/app/console edirectory:sync -r --env=prod --domain=veteranconnect.com.au
