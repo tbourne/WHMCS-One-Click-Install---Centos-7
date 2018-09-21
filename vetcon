@@ -1,5 +1,3 @@
-sudo -i
-php -f /home/ui3t0yuf/public_html/cron/email_traffic.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
 php -f /home/ui3t0yuf/public_html/cron/renewal_reminder.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
 php -f /home/ui3t0yuf/public_html/cron/daily_maintenance.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
 php -f /home/ui3t0yuf/public_html/cron/report_rollup.php 1>&2 >> /home/ui3t0yuf/public_html/cron/cron.log
